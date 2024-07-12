@@ -23,13 +23,8 @@ export type CreateUserParams = {
       description: string
       location: string
       imageUrl: string
-<<<<<<< HEAD
       startDate: Date
       endDate: Date
-=======
-      startDateTime: Date
-      endDateTime: Date
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
       categoryId: string
       price: string
       isFree: boolean
@@ -46,13 +41,8 @@ export type CreateUserParams = {
       imageUrl: string
       description: string
       location: string
-<<<<<<< HEAD
       startDate: Date
       endDate: Date
-=======
-      startDateTime: Date
-      endDateTime: Date
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
       categoryId: string
       price: string
       isFree: boolean
@@ -94,13 +84,8 @@ export type CreateUserParams = {
     isFree: boolean
     imageUrl: string
     location: string
-<<<<<<< HEAD
     startDate: Date
     endDate: Date
-=======
-    startDateTime: Date
-    endDateTime: Date
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
     url: string
     organizer: {
       _id: string
