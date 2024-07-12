@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import HeroImage from "../../public/assets/images/hero.png";
-<<<<<<< HEAD
 import Collection from "@/components/shared/Collection";
 import { getAllEvents } from "@/lib/actions/event.actions";
 export default async function Home() {
@@ -13,9 +12,6 @@ export default async function Home() {
     limit: 6,
   });
 
-=======
-export default function Home() {
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
@@ -49,7 +45,6 @@ export default function Home() {
           Trusted by <br /> Thousands of Events
         </h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
-<<<<<<< HEAD
           Search CategoryFilter
         </div>
         <Collection
@@ -61,11 +56,6 @@ export default function Home() {
           page={1}
           totalPages={2}
         />
-=======
-          Search
-          CategoryFilter
-        </div>
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
       </section>
     </>
   );

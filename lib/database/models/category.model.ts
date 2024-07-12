@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import { Document, model, models, Schema } from "mongoose";
-=======
-import { Document, model, models } from "mongoose";
-import { Schema } from "mongoose";
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
 
 export interface ICategory extends Document {
   _id: string;
