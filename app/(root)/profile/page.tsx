@@ -1,6 +1,8 @@
 import Collection from "@/components/shared/Collection";
 import { Button } from "@/components/ui/button";
 import { getEventsByUser } from "@/lib/actions/event.actions";
+import { getOrdersByUser } from "@/lib/actions/order.actions";
+import { IOrder } from "@/lib/database/models/order.model";
 import { auth } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
@@ -11,6 +13,10 @@ async function ProfilePage() {
 
   const organizedEvents = await getEventsByUser({ userId, page: 1 });
 
+  const orders = await getOrdersByUser({ userId, page: 1 });
+  const orderedEvents = orders?.data.map((order: IOrder) => order.event) || [];
+
+  console.log(orderedEvents);
   return (
     <>
       {/* My tickets */}
@@ -23,9 +29,9 @@ async function ProfilePage() {
         </div>
       </section>
       {/*Events Organizer */}
-      {/* <section className="wrapper my-8">
+      <section className="wrapper my-8">
         <Collection
-          data={events?.data}
+          data={orderedEvents}
           emptyTitle="No events tickets purchased yet"
           emptyStateSubtext="Come worries, we got you covered!"
           collectionType="My_Tickets"
@@ -34,7 +40,7 @@ async function ProfilePage() {
           totalPages={2}
           urlParamName="ordersPage"
         />
-      </section> */}
+      </section>
 
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
         <div className="wrapper flex items-center justify-center sm:justify-between">
