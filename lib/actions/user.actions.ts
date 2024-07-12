@@ -13,11 +13,7 @@ import { CreateUserParams, UpdateUserParams } from '@/types'
 export async function createUser(user: CreateUserParams) {
   try {
     await connectToDatabase()
-<<<<<<< HEAD
     // Create new user in the database mongoose
-=======
-
->>>>>>> 58d124bac1e88d209e0106ed4ebc39a0e9acf59c
     const newUser = await User.create(user)
     return JSON.parse(JSON.stringify(newUser))
   } catch (error) {
