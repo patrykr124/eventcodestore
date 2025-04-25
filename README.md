@@ -25,9 +25,9 @@ Database: MongoDB (Mongoose ODM)
 
 Authentication: Clerk
 
-Payments: Stripe (or other provider)
+Payments: Stripe 
 
-Hosting: Vercel / Docker (optional)
+Hosting: Vercel
 
 
 ![image](https://github.com/user-attachments/assets/70698ebc-768c-4632-af98-92a72bd44651)
